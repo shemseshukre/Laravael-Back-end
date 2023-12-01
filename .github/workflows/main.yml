@@ -34,7 +34,7 @@ jobs:
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
     - name: migrate Database
-      run: php artisan migrate
+      run: php artisan migrate --force
     - name: optimize 
       run: php artisan optimize:clear
     - name: Sync files
